@@ -1,6 +1,6 @@
 # Project information
-site_name: 'Site Name'
-site_description: 'Description'
+site_name: 'Тестування на вебдоступність за допомогою axe-core'
+site_description: 'workshop'
 site_author: 'Ruslan Iskov'
 
 use_directory_urls: false
@@ -103,7 +103,11 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - First page: "first_page.md"
-  - Chapter 1:
-    - File 1: file1.md
-    - File 2: file2.md
+  - "Intro": index.md
+  - "Альтернативний текст для зображень": 01_img_alt.md
+  - "Текст посилання": 02_link_text.md
+  - "Відсутність мітки": 03_input_label.md
+  - "Декілька міток": 04_multiple_labelsl.md
+  - "Семантика": 05_incorrect_role.md
+  - "Відсутність заголовка": 06_header1.md
+  - "Помилки з орієнтирами": 07_incorrect_landmarks.md

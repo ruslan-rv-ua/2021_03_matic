@@ -2,8 +2,8 @@
 hide:
 #  - navigation # Hide navigation
 #  - toc        # Hide table of contents
-# https://apps.ucu.edu.ua/design-school-2021/?fbclid=IwAR0qNSbfSszUu94tNZUZhIXYiHROlDD-S0g7FUrFwrzgfita0iv4GS2BOGU
 ---
-# Your new super project!
+# Тестування на вебдоступність за допомогою axe-core
 
-some smart content
+![matic logo](https://maticinsurance-cdn.sirv.com/matic-logo/matic-header-logo-for-consumers.png?w=234&h=55)
+![inclusive it logo](iit_logo.svg)

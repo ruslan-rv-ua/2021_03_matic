@@ -18,7 +18,7 @@
     
     
       
-        <title>Intro - Тестування на вебдоступність за допомогою axe-core</title>
+        <title>Помилки з орієнтирами - Тестування на вебдоступність за допомогою axe-core</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#axe-core" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти до змісту
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Помилки з орієнтирами
             
           </span>
         </div>
@@ -149,20 +149,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Intro
       </a>
-      
     </li>
   
 
@@ -263,11 +254,49 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="07_incorrect_landmarks.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Помилки з орієнтирами
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="07_incorrect_landmarks.html" class="md-nav__link md-nav__link--active">
         Помилки з орієнтирами
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Приклади
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -290,6 +319,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Приклади
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -301,9 +345,106 @@
               
                 
                 
-                <h1 id="axe-core">Тестування на вебдоступність за допомогою axe-core</h1>
-<p><img alt="matic logo" src="https://maticinsurance-cdn.sirv.com/matic-logo/matic-header-logo-for-consumers.png?w=234&amp;h=55" />
-<img alt="inclusive it logo" src="iit_logo.svg" /></p>
+                <h1 id="_1">"неправильні орієнтири"</h1>
+<ul>
+<li>ВЕСЬ контент має міститись всередині лендмарків!</li>
+<li>найбільш "корисні": <code>header/banner, nav/navigation, main, footer/contentinfo</code></li>
+<li>не більше одного <code>banner, main, contentinfo</code> на сторінку</li>
+<li>однакові орієнтири повинні мати програмно визначуваний ідентифікатор</li>
+<li>чим менше орієнтрів, тим краще</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>HTML5</th>
+<th>ARIA Role</th>
+<th>підтримка скрінрідерами</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>role="banner"</td>
+<td>так</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>role="navigation"</td>
+<td>так</td>
+</tr>
+<tr>
+<td>відсутнє</td>
+<td>role="search"</td>
+<td>так</td>
+</tr>
+<tr>
+<td><code>&lt;main&gt;</code></td>
+<td>role="main"</td>
+<td>так</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>role="contentinfo"</td>
+<td>так</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>role="complementary"</td>
+<td>так</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>role="region"</td>
+<td>частково. Рекомедується з <code>aria-label</code> або <code>aria-labelledby</code></td>
+</tr>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>role="article"</td>
+<td>частково (JAWS)</td>
+</tr>
+<tr>
+<td><code>&lt;form&gt;</code></td>
+<td>role="form"</td>
+<td>частково (лише якщо є <code>role="form"</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Приклади</h2>
+<p>Добре — кожен <code>nav</code> на цій сторінці можна ідентифікувати:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;md-nav md-nav--primary&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Navigation&quot;</span> <span class="na">data-md-level</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+... 
+<span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;md-nav md-nav--secondary&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Зміст&quot;</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<hr />
+<p>Погано — два футера, дві основні частини на цій сторінці:</p>
+<h1>Це заголовок дуже цікавої статті</h1>
+<main class="article">
+  <p>Текст дуже змістовної і цікавої статті. [...]</p>
+  <div role="contentinfo">
+    <p>[...інформація про статтю у футері...]</p>
+  </div>
+</main>
+
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Це заголовок дуже цікавої статті<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;article&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Текст дуже змістовної і цікавої статті. [...]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;contentinfo&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>[...інформація про статтю у футері...]<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;contentinfo&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>А тут футер для всієї сторінки<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;md-footer&quot;</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
                 
                   
                 
@@ -323,20 +464,20 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-      
-        <a href="01_img_alt.html" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="06_header1.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Вперед
+                Назад
               </span>
-              Альтернативний текст для зображень
+              Відсутність заголовка
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   

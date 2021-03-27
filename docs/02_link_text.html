@@ -18,7 +18,7 @@
     
     
       
-        <title>Intro - Тестування на вебдоступність за допомогою axe-core</title>
+        <title>Текст посилання - Тестування на вебдоступність за допомогою axe-core</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#axe-core" class="md-skip">
+        <a href="#_1" class="md-skip">
           Перейти до змісту
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Текст посилання
             
           </span>
         </div>
@@ -149,20 +149,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         Intro
       </a>
-      
     </li>
   
 
@@ -188,11 +179,56 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="02_link_text.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Текст посилання
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02_link_text.html" class="md-nav__link md-nav__link--active">
         Текст посилання
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Зрозумілий текст посилання
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    Текст як ID
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -290,6 +326,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Зрозумілий текст посилання
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    Текст як ID
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -301,9 +359,60 @@
               
                 
                 
-                <h1 id="axe-core">Тестування на вебдоступність за допомогою axe-core</h1>
-<p><img alt="matic logo" src="https://maticinsurance-cdn.sirv.com/matic-logo/matic-header-logo-for-consumers.png?w=234&amp;h=55" />
-<img alt="inclusive it logo" src="iit_logo.svg" /></p>
+                <h1 id="_1">"відсутність читабельного тексту в посиланні"</h1>
+<p>Текст посилання:</p>
+<ul>
+<li>визначається програмно</li>
+<li>описує куди веде посилання</li>
+<li>не містить "посилання на", "перейти до", ...</li>
+</ul>
+<p>Як:</p>
+<ul>
+<li><code>aria-labelledby</code></li>
+<li><code>aria-label</code></li>
+<li><code>&lt;a&gt;...&lt;/a&gt;</code></li>
+<li><code>title</code> (небажано)</li>
+<li>візуально прихований текст, доступний для асистивних технологій</li>
+</ul>
+<p>Добре — візуально прихований текст посилання (Twitter Bootstrap):</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h2 id="_2">Зрозумілий текст посилання</h2>
+<p><a href="example_read_more.html">Приклад: незрозумілий текст посилання</a></p>
+<table>
+<thead>
+<tr>
+<th>Погано</th>
+<th>Добре</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>цій сторінці</td>
+<td>сайті Microsoft</td>
+</tr>
+<tr>
+<td>клацніть тут</td>
+<td>завантажити документ</td>
+</tr>
+<tr>
+<td>читати більше</td>
+<td>Читати повністю статтю про котиків</td>
+</tr>
+</tbody>
+</table>
+<h2 id="id">Текст як ID</h2>
+<p>Погано — два посилання на один документ з різним текстом:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;contact.html&quot;</span><span class="p">&gt;</span>Про нас<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;contact.html&quot;</span><span class="p">&gt;</span>Зв&#39;язатись з нами<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<hr />
+<p>Погано: два посилання на різні документи з однаковим текстом:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;contact.html&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Зв&#39;язатись з нами<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;directory.html&quot;</span><span class="p">&gt;</span>Зв&#39;язатись з нами<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
                 
                   
                 
@@ -323,14 +432,28 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        <a href="01_img_alt.html" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Альтернативний текст для зображень
+            </div>
+          </div>
+        </a>
       
-        <a href="01_img_alt.html" class="md-footer__link md-footer__link--next" rel="next">
+      
+        <a href="03_input_label.html" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Альтернативний текст для зображень
+              Відсутність мітки
             </div>
           </div>
           <div class="md-footer__button md-icon">
