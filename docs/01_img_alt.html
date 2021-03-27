@@ -48,6 +48,8 @@
     
       <link rel="stylesheet" href="stylesheets/codehilite.css">
     
+      <link rel="stylesheet" href="stylesheets/fixes.css">
+    
     
       
     
@@ -123,6 +125,8 @@
         <div class="md-main__inner md-grid">
           
             
+              
+                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -316,7 +320,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -420,6 +426,12 @@
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;http://google.com&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Клацніть тут щоб перейти до Пошукова система Гугл&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<hr />
+<p>Погано — зображення як контрол без текстового контента:</p>
+<p><input type="image" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" name="submit"></p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;submit.png&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
                 
                   
