@@ -48,6 +48,7 @@ theme:
 extra_css:
   - stylesheets/dark_theme.css
   - stylesheets/codehilite.css
+  - stylesheets/fixes.css
 
 # switch off plugins, it's for removing 'search' feature
 plugins: []

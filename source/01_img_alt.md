@@ -1,7 +1,7 @@
 ---
 hide:
 #  - navigation # Hide navigation
-#  - toc        # Hide table of contents
+ - toc        # Hide table of contents
 ---
 # "відсутність альт тексту"
 
@@ -78,3 +78,11 @@ hide:
     <a href="http://google.com">
         <img alt="Клацніть тут щоб перейти до Пошукова система Гугл" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
     </a>
+
+---
+Погано — зображення як контрол без текстового контента:
+
+<input type="image" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" name="submit">
+
+	:::html
+	<input type="image" src="submit.png" name="submit">

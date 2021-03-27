@@ -7,3 +7,4 @@ hide:
 
 ![matic logo](https://maticinsurance-cdn.sirv.com/matic-logo/matic-header-logo-for-consumers.png?w=234&h=55)
 ![inclusive it logo](iit_logo.svg)
+![qr код з посиланням на цю презентацію](qr_link.png)

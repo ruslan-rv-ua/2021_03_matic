@@ -22,7 +22,10 @@ hide:
 Добре — візуально прихований текст посилання (Twitter Bootstrap):
 
 	:::html
-	<a></a>
+	<a>
+	  <span aria-hidden="true" class="якась_шрифтова_іконка"></span>
+	  <span class="sr-only">Ціни</span>
+	</a>
 	
 	
 ## Зрозумілий текст посилання
