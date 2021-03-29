@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="stylesheets/fixes.css">
     
+      <link rel="stylesheet" href="stylesheets/sronly.css">
+    
     
       
     
@@ -154,7 +156,22 @@
   
     <li class="md-nav__item">
       <a href="index.html" class="md-nav__link">
-        Intro
+        Інтро
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_incorrect_role.html" class="md-nav__link">
+        Семантика
       </a>
     </li>
   
@@ -273,21 +290,6 @@
   
   
     <li class="md-nav__item">
-      <a href="05_incorrect_role.html" class="md-nav__link">
-        Семантика
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="06_header1.html" class="md-nav__link">
         Відсутність заголовка
       </a>
@@ -376,10 +378,24 @@
 <li><code>title</code> (небажано)</li>
 <li>візуально прихований текст, доступний для асистивних технологій</li>
 </ul>
-<p>Добре — візуально прихований текст посилання (Twitter Bootstrap):</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;якась_шрифтова_іконка&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sr-only&quot;</span><span class="p">&gt;</span>Ціни<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<hr />
+<p>Погано — незрозумілий текст посилання:</p>
+<p><a role="button" class="md-button">
+  <span >😄</span>
+</a></p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;md-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>😄<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Добре — візуально прихована іконка, текст для АТ (Twitter Bootstrap):</p>
+<p><a role="button" class="md-button">
+  <span aria-hidden="true">😄</span>
+  <span class="sr-only">Зробити усе добре!</span>
+</a></p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;md-button&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">aria-hidden</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>😄<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sr-only&quot;</span><span class="p">&gt;</span>Зробити усе добре!<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 
